@@ -196,20 +196,34 @@ describe('merge', function(){
         let arr2 = [-9,0];
         assert.deepEqual(functions.merge(arr1,arr2),[ 4, -9 , 7 ,0]);
     });
-        /* it('should return 2 if array is [1,2,1]', function(){
-        assert.equal(functions.largest([1,2,1]), 2);
+    
+    it('should return ["Ben", "Gwen", "Max", "Fourarms"] if arr1 is ["Ben", "Max"] and ["Gwen", "Fourarms"]', function(){
+        let arr1 = ["Ben", "Max"];
+        let arr2 = ["Gwen", "Fourarms"];
+        assert.deepEqual(functions.merge(arr1,arr2),["Ben", "Gwen", "Max", "Fourarms"]);
     });
-    it('should return 5 if array is [-2,5,3]', function(){
-        assert.equal(functions.largest([-2,5,3]), 5);
-    });
-    it('should return -1 if array is [-1,-3,-2]', function(){
-        assert.equal(functions.largest([-1,-3,-2]), -1 );
-    });
-    it('should return 1 if array is [1]', function(){
-        assert.equal(functions.largest([1]), 1 );
-    });
-    it('should return ten if array is ["ten","nine"]', function(){
 
-        assert.equal(functions.largest(["ten","nine"]),"ten");
-    });*/
+    it('should return [4, "Ben", "Gwen", 0] if arr1 is [4, "Gwen"] and ["Ben", 0]', function(){
+        let arr1 = [4, "Gwen"];
+        let arr2 = ["Ben", 0];
+        assert.deepEqual(functions.merge(arr1,arr2),[4, "Ben", "Gwen", 0]);
+    });
+
+    it('should return [4, 7] if arr1 is [4, 7] and []', function(){
+        let arr1 = [4, 7];
+        let arr2 = [];
+        assert.deepEqual(functions.merge(arr1,arr2),[4, 7]);
+    });
+    
+    it('should return [4, 7] if arr1 is [] and [4, 7]', function(){
+        let arr2 = [4, 7];
+        let arr1 = [];
+        assert.deepEqual(functions.merge(arr1,arr2),[4, 7]);
+    });
+
+    it('should return [1, "a", 2, 3] if arr1 is [1, 2, 3] and arr2 is ["a"]', function(){
+        let arr2 = ["a"];
+        let arr1 = [1, 2, 3];
+        assert.deepEqual(functions.merge(arr1,arr2),[1, "a", 2, 3]);
+    });
 });

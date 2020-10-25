@@ -103,12 +103,13 @@ const merge = function(arr1, arr2) {
     let merged = [];
 
     for(let i = 0; i < max(len1, len2); i++) {
-        if (arr1[i]) merged.push(arr1[i]);
-        if (arr2[i]) merged.push(arr2[i]);
+        if (arr1[i] !== undefined) merged.push(arr1[i]);
+        if (arr2[i] !== undefined) merged.push(arr2[i]);
     }
 
     return merged;
 };
+
 
 module.exports = {
     sum,
