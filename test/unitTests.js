@@ -132,11 +132,8 @@ describe('total', function(){
     it('should return 1 if array is [1]', function(){
         assert.equal(functions.total([1]), 1 );
     });
-    it('should return 0tennine if array is ["ten","nine"]', function(){
-
-        assert.equal(functions.total(["ten","nine"]),"0tennine");
-    });
 });
+
 describe('smallest', function(){
     it('should return null if array is empty', function(){
         assert.equal(functions.smallest([]), null);
@@ -156,11 +153,8 @@ describe('smallest', function(){
     it('should return 1 if array is [1]', function(){
         assert.equal(functions.smallest([1]), 1 );
     });
-    it('should return nine if array is ["ten","nine"]', function(){
-
-        assert.equal(functions.smallest(["ten","nine"]),"nine");
-    });
 });
+
 describe('largest', function(){
     it('should return null if array is empty', function(){
         assert.equal(functions.largest([]), null);
@@ -180,11 +174,8 @@ describe('largest', function(){
     it('should return 1 if array is [1]', function(){
         assert.equal(functions.largest([1]), 1 );
     });
-    it('should return ten if array is ["ten","nine"]', function(){
-
-        assert.equal(functions.largest(["ten","nine"]),"ten");
-    });
 });
+
 describe('merge', function(){
     it('should return null if array is empty', function(){
         let arr1 = [];
