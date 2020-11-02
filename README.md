@@ -16,4 +16,4 @@ if the command `npm test` does not work, you may need to install mocha globally 
 
 ## What we learned working on this project
 
-- I learned how to use Chai's syntax for unit tests.
+- We learned how to use Chai's syntax for unit tests.
